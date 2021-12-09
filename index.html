@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="VALORANT-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    
+    <section>
+        <img src="bg.jpg" id="bg">
+        <img src="leer.png" id="leer">
+        <img src="reyna.png" id="reyna">
+        <img src="mountain.png" id="mountain">
+        <div class="page">
+            <div class="demo">
+                <h2 style="font-family: 'VALORANT'; font-weight: normal; font-style: normal;" id="text">The hunt begins!</h2>
+                <pre title="Usage">.your-style {
+            font-family: 'VALORANT';
+            font-weight: normal;
+            font-style: normal;
+        }</pre>
+        
+    </section>
+    <script type="text/javascript">
+       let bg = document.getElementById("bg");
+       let leer = document.getElementById("leer");
+       let reyna = document.getElementById("reyna");
+       let mountain = document.getElementById("mountain");
+       let text = document.getElementById("text");
+       window.addEventListener('scroll', function(){
+           var value = window.scrollY;
+
+           bg.style.top = value * 0.5 + 'px';
+           leer.style.left = -value * 0.5 + 'px';
+           reyna.style.top = -value * 0.25 + 'px';
+           mountain.style.top = -value * 0.25 + 'px';
+           text.style.top = -value * 1 + 'px';
+       })
+    </script>
+    
+</body>
+</html>
